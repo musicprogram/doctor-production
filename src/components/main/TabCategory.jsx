@@ -1,0 +1,59 @@
+import {Fragment} from "react";
+
+import {Container, Navbar, ButtonGroup, Nav} from 'react-bootstrap';
+import {sectionCategories} from "../../data/dataMain";
+import {useRecoilState} from "recoil";
+import {arrayLiquors, categoryMain} from "../../states/mainState";
+import {dataRules} from "../../data/dataRegletas";
+import {dataCocktails} from "../../data/dataCocktails";
+import {dataBeers} from "../../data/dataBeers";
+
+export const TabCategory = () =>{
+  const [category, setCategory] = useRecoilState(categoryMain)
+  const [liquors, setLiquors] = useRecoilState(arrayLiquors)
+
+  const handleSectionClick = (section) =>{
+    if(section){
+      setCategory(-1)
+
+      setTimeout(()=>{
+// console.log(section)
+        section.id === 1 && setLiquors(dataRules) ||
+        section.id === 2 && setLiquors(dataCocktails) ||
+        section.id === 3 && setLiquors(dataBeers)
+        setCategory(section.id)
+      },500)
+
+    }
+
+  }
+
+  return(
+    <Fragment>
+      <div className="d-flex justify-content-center">
+        <img
+          src={'images/logoDoctor.png'}
+          alt=""
+          className="imgBrand animate__animated animate__jackInTheBox" />
+      </div>
+
+      <Nav justify fill variant="tabs" className="animate__animated animate__fadeIn mb-3">
+        {
+          sectionCategories.map((section, i)=>{
+            return(
+              <Fragment>
+                <Nav.Item key={i} onClick={()=> handleSectionClick(section)}>
+                  <Nav.Link>
+                  <span className={`textCaprasimo lead  textShadow1 confTextGrad ${category === section.id ? 'colorTextGrad1' : 'colorTextGrad5'}`}>
+                    {section.category}
+                  </span>
+                  </Nav.Link>
+                </Nav.Item>
+              </Fragment>
+            )
+          })
+        }
+      </Nav>
+    </Fragment>
+  )
+}

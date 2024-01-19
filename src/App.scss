@@ -1,0 +1,303 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+@import 'animate.css';
+
+
+/*
+  #3f91b0
+  #9dcebf
+
+  #e5dbb2
+  #1a1936
+*/
+
+body{
+  background-color: #1d1d1e;
+}
+
+.textCaprasimo{
+  font-family: 'Caprasimo', serif;
+}
+
+.textAcme{
+  font-family: 'Acme', sans-serif;
+}
+
+body{
+  background-color: #1d1d1e;
+}
+
+.height-100vh {
+  height: 100vh;
+}
+
+.center-aligned {
+  display: box;
+  display: flex;
+  box-align: center;
+  align-items: center;
+  box-pack: center;
+  justify-content: center;
+}
+
+.centerEasy{
+  font-size: 70px;
+}
+
+.centerEasy {
+  color: hsla(0, 0%, 0%, .9);
+  font: normal 70px  Round;
+  font-family: 'Caprasimo', serif;
+  height: 70px;
+  left: 0;
+  letter-spacing: 5px;
+  margin: -80px 0 0 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  width: 100%;
+  animation: move linear 2000ms infinite;
+}
+
+@keyframes move {
+  0% {
+    text-shadow:
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            -4px 4px 0 hsla(180, 100%, 50%, 1),
+            -3px 3px 0 hsla(180, 100%, 50%, 1),
+            -2px 2px 0 hsla(180, 100%, 50%, 1),
+            -1px 1px 0 hsla(180, 100%, 50%, 1)
+  ;
+  }
+  25% {
+    text-shadow:
+            -4px -4px 0 hsla(180, 100%, 50%, 1),
+            -3px -3px 0 hsla(180, 100%, 50%, 1),
+            -2px -2px 0 hsla(180, 100%, 50%, 1),
+            -1px -1px 0 hsla(180, 100%, 50%, 1),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+  ;
+  }
+  50% {
+    text-shadow:
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsla(180, 100%, 50%, 1),
+            3px -3px 0 hsla(180, 100%, 50%, 1),
+            2px -2px 0 hsla(180, 100%, 50%, 1),
+            1px -1px 0 hsla(180, 100%, 50%, 1)
+  ;
+  }
+  75% {
+    text-shadow:
+            4px 4px 0 hsla(180, 100%, 50%, 1),
+            3px 3px 0 hsla(180, 100%, 50%, 1),
+            2px 2px 0 hsla(180, 100%, 50%, 1),
+            1px 1px 0 hsla(180, 100%, 50%, 1),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+  ;
+  }
+  100% {
+    text-shadow:
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            4px -4px 0 hsl(274, 46%, 53%),
+            -4px 4px 0 hsla(180, 100%, 50%, 1),
+            -3px 3px 0 hsla(180, 100%, 50%, 1),
+            -2px 2px 0 hsla(180, 100%, 50%, 1),
+            -1px 1px 0 hsla(180, 100%, 50%, 1)
+  ;
+  }
+}
+
+
+.background-image {
+  position: relative;
+  -webkit-filter: drop-shadow(1px 1px 1px #333333);
+  filter:         drop-shadow(1px 1px 1px #413c3c);
+}
+.imgLoader{
+  width: 10%;
+}
+
+.text {
+  position: absolute;
+}
+
+.myVideo{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*  */
+
+.back1{
+  background-image:  radial-gradient(circle, #62029f, #432084, #2f2565, #252443, #1f1f20) ;
+}
+
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+// background: rgba(0, 0, 0, 0.9);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.transBlack {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.transBlack1 {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Add some content at the bottom of the video/page */
+.contentTop {
+  position: fixed;
+  top: 0;
+//    background: rgba(0, 0, 0, 0.0);
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto !important;
+}
+
+
+.colorTextGrad1{
+  background: -webkit-linear-gradient(#BC329E, #bb6098);
+}
+
+.colorTextGrad2{
+  background: -webkit-linear-gradient(#342c2c, #000000);
+}
+
+.colorTextGrad3{
+  background: linear-gradient(to right, #000000 0%, #003600 50%, #CFCFCF 100%);
+}
+.colorTextGrad4{
+  background: linear-gradient(to right, #B4CACF 0%, #CFCFCF 100%);
+}
+
+
+.colorTextGrad5{
+  background: -webkit-linear-gradient(#000000, #e2f6ff, #21c3ff);
+}
+
+.colorTextGrad6{
+  background: -webkit-linear-gradient(#00FFFFFF 90%, #effffb 10%);
+}
+
+
+.gradTextColor{
+  background: -webkit-linear-gradient(45deg, #edecea 80%, #62029f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.confTextGrad{
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.textShadow1{
+  text-shadow: 0px 3px 2px rgba(255, 255, 255, 0.32);
+}
+.textShadow2{
+  text-shadow: 3px 3px 2px rgba(18, 31, 34, 0.35);
+}
+
+.textShadow3{
+  text-shadow: 1px 1px 1px rgba(18, 31, 34, 0.20);
+}
+
+
+.zIndex{
+  z-index: 12000;
+}
+.zIndex2{
+  z-index: 13000;
+}
+
+.imgBrand{
+  width: 15%;
+}
+
+.navbar {
+  position: relative;
+}
+.brand {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  margin-left: -50px !important;  /* 50% of your logo width */
+  display: block;
+}
+
+.categoryMain{
+  padding-bottom: 53%;
+}
+
+.textObj{
+  font-size: 3.5vw;
+}
+.textObjTittle{
+  font-size: 7vw;
+}
+
+
+/* Para el track de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Para el color del thumb (la parte móvil de la barra de desplazamiento) */
+::-webkit-scrollbar-thumb {
+  background-color: #47285d; /* Cambia este color según tus preferencias */
+}
+
+/* Para el fondo del thumb al hacer hover  e5dbb2
+1a1936  */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #00FFFFFF; /* Cambia este color según tus preferencias */
+}
+
+/* Para el track de la barra de desplazamiento */
+scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Para el color del thumb (la parte móvil de la barra de desplazamiento) */
+scrollbar thumb {
+  background-color: #47285d; /* Cambia este color según tus preferencias */
+}
+
+/* Para el fondo del thumb al hacer hover */
+scrollbar-thumb:hover {
+  background-color: #00FFFFFF; /* Cambia este color según tus preferencias */
+}
