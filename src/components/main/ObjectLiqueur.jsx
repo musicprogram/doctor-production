@@ -20,7 +20,8 @@ export const ObjectLiqueur = ({liquer, category}) =>{
                     {
                       category === 1 && 'Regleta: ' ||
                       category === 2 && 'X3: ' ||
-                      category === 3 && 'Personal: '
+                      (category === 3 || category === 4) && 'Personal: ' ||
+                      category === 5 && 'Vaso: '
                     }
                     { liquer.value }
                   </>
@@ -38,7 +39,7 @@ export const ObjectLiqueur = ({liquer, category}) =>{
                     {
                       category === 1 && 'Shot individual: ' ||
                       category === 2 && 'Individual: ' ||
-                      category === 3 && '1 litro: '
+                      (category === 3 || category === 4 || category === 5) && '1 litro: '
                     }
                     { liquer.value2 }
                   </>
@@ -49,7 +50,7 @@ export const ObjectLiqueur = ({liquer, category}) =>{
 
           {
             liquer.value3 && <h4 className="mt-1 text-right textAcme font-weight-bold">
-              {category === 3 && '2 litros: '} {liquer.value3 }
+              {(category === 3 || category === 4 || category === 5) && '2 litros: '} {liquer.value3 }
             </h4>
           }
 

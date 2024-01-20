@@ -9,7 +9,15 @@ export const sectionCategories = [
   },
   {
     id: 3,
-    category: 'Cocteles'
+    category: 'Cócteles'
+  },
+  {
+    id: 4,
+    category: 'Cervezas'
+  },
+  {
+    id: 5,
+    category: 'Sodas'
   }
 
 ]

@@ -12,7 +12,7 @@ const VideoBackground = () =>{
   useEffect(()=>{
     setTimeout(()=>{
       setCategory(1)
-    }, 4400)
+    }, 2500)
   },[])
 
 

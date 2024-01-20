@@ -9,6 +9,7 @@ import {dataCocktails} from "../../data/dataCocktails";
 import {dataBeers} from "../../data/dataBeers";
 import {dataShots} from "../../data/dataShots.js";
 import {dataSubmarinos} from "../../data/dataSubmarinos.js";
+import {dataSodas} from "../../data/dataSodas.js";
 
 
 export const TabCategory = () =>{
@@ -23,7 +24,9 @@ export const TabCategory = () =>{
 // console.log(section)
         section.id === 1 && setLiquors(dataShots) ||
         section.id === 2 && setLiquors(dataSubmarinos) ||
-        section.id === 3 && setLiquors(dataCocktails)
+        section.id === 3 && setLiquors(dataCocktails) ||
+        section.id === 4 && setLiquors(dataBeers) ||
+        section.id === 5 && setLiquors(dataSodas)
         setCategory(section.id)
       },500)
 
@@ -47,7 +50,7 @@ export const TabCategory = () =>{
               <Fragment>
                 <Nav.Item key={i} onClick={()=> handleSectionClick(section)}>
                   <Nav.Link>
-                  <span className={`textCaprasimo lead  textShadow1 confTextGrad ${category === section.id ? 'colorTextGrad1' : 'colorTextGrad5'}`}>
+                  <span className={`textCaprasimo btnTabCat  textShadow1 confTextGrad ${category === section.id ? 'colorTextGrad1' : 'colorTextGrad5'}`}>
                     {section.category}
                   </span>
                   </Nav.Link>
