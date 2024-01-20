@@ -7,6 +7,9 @@ import {arrayLiquors, categoryMain} from "../../states/mainState";
 import {dataRules} from "../../data/dataRegletas";
 import {dataCocktails} from "../../data/dataCocktails";
 import {dataBeers} from "../../data/dataBeers";
+import {dataShots} from "../../data/dataShots.js";
+import {dataSubmarinos} from "../../data/dataSubmarinos.js";
+
 
 export const TabCategory = () =>{
   const [category, setCategory] = useRecoilState(categoryMain)
@@ -18,9 +21,9 @@ export const TabCategory = () =>{
 
       setTimeout(()=>{
 // console.log(section)
-        section.id === 1 && setLiquors(dataRules) ||
-        section.id === 2 && setLiquors(dataCocktails) ||
-        section.id === 3 && setLiquors(dataBeers)
+        section.id === 1 && setLiquors(dataShots) ||
+        section.id === 2 && setLiquors(dataSubmarinos) ||
+        section.id === 3 && setLiquors(dataCocktails)
         setCategory(section.id)
       },500)
 
@@ -32,7 +35,7 @@ export const TabCategory = () =>{
     <Fragment>
       <div className="d-flex justify-content-center">
         <img
-          src={'images/logoDoctor.png'}
+          src={'/doctor-production/images/logoDoctor.png'}
           alt=""
           className="imgBrand animate__animated animate__jackInTheBox" />
       </div>

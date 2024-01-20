@@ -1,6 +1,7 @@
 import {atom} from "recoil";
 import {dataRules} from "../data/dataRegletas";
 import {randomNum} from "../components/utils.js";
+import {dataShots} from "../data/dataShots.js";
 
 export const categoryMain = atom({
   key: 'categoryMain', // unique ID (with respect to other atoms/selectors)
@@ -16,6 +17,6 @@ export const videoMain = atom({
 
 export const arrayLiquors = atom({
   key: 'arrayLiquors', // unique ID (with respect to other atoms/selectors)
-  default: dataRules
+  default: dataShots
 });
 

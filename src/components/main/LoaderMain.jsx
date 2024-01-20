@@ -13,7 +13,7 @@ export const LoaderMain = () =>{
         <div className="height-100vh center-aligned">
           <img
             ref={logoRef}
-            src={'/images/logoDoctor.png'}
+            src={'/doctor-production/images/logoDoctor.png'}
             alt=""
             className="background-image imgLoader animate__animated animate__infinite	infinite animate__heartBeat" />
         </div>

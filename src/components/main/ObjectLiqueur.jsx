@@ -1,6 +1,6 @@
 import {Fragment} from "react";
 
-export const ObjectLiqueur = ({liquer}) =>{
+export const ObjectLiqueur = ({liquer, category}) =>{
   return(
     <Fragment>
       <div className="row mt-2 mb-2 textShadow3">
@@ -11,23 +11,48 @@ export const ObjectLiqueur = ({liquer}) =>{
         </div>
 
         <div className="col-4">
+          {
+            liquer.value && (
+              <>
+                <h4 className="mt-1 text-right font-weight-bold textAcme text-white fw-bold">
 
-          <h4 className="mt-1 text-right font-weight-bold textAcme text-white fw-bold">
-            {liquer.id === 1 ? '' + liquer.value : ''}
-            {liquer.id === 2 ? 'Vaso: ' + liquer.value : ''}
-            {liquer.id === 3 ? 'Vaso: ' + liquer.value : ''}
-          </h4>
+                  <>
+                    {
+                      category === 1 && 'Regleta: ' ||
+                      category === 2 && 'X3: ' ||
+                      category === 3 && 'Personal: '
+                    }
+                    { liquer.value }
+                  </>
 
-          <h4 className="mt-1 text-right textAcme font-weight-bold">
+                </h4>
+              </>
+            )
+          }
 
-            {liquer.id === 1 ? '' + liquer.value2 : ''}
-            {liquer.id === 2 ? 'Litro: ' + liquer.value2 : ''}
-            {liquer.id === 3 ? '' + liquer.value2 : ''}
+          {
+            liquer.value2 && (
+              <>
+                <h4 className="mt-1 text-right textAcme font-weight-bold">
+                  <>
+                    {
+                      category === 1 && 'Shot individual: ' ||
+                      category === 2 && 'Individual: ' ||
+                      category === 3 && '1 litro: '
+                    }
+                    { liquer.value2 }
+                  </>
+                </h4>
+              </>
+            )
+          }
 
-          </h4>
-          <h4 className="mt-1 text-right textAcme font-weight-bold">
-            {liquer.id === 2 ? '2 Litros: ' + liquer.value3 : ''}
-          </h4>
+          {
+            liquer.value3 && <h4 className="mt-1 text-right textAcme font-weight-bold">
+              {category === 3 && '2 litros: '} {liquer.value3 }
+            </h4>
+          }
+
 
         </div>
       </div>

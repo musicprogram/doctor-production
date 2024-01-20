@@ -19,7 +19,7 @@ const VideoBackground = () =>{
   return(
     <>
         <video key={videoBack} autoPlay muted loop className="myVideo">
-          <source src={`./videos/${videoBack}.mp4`} type="video/mp4"/>
+          <source src={`/doctor-production/videos/${videoBack}.mp4`} type="video/mp4"/>
         </video>
     </>
   )

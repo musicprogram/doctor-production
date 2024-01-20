@@ -47,7 +47,10 @@ export const DashMain = () =>{
                 {
                   liquors.map((obj, i)=>{
                     return(
-                      <ObjectLiqueur liquer={obj} key={i} />
+                      <ObjectLiqueur
+                        category={category}
+                        liquer={obj}
+                        key={i} />
                     )
                   })
                 }
