@@ -83,7 +83,7 @@ export const DashMain = () =>{
         }
 
 
-        <div className={`zIndex2 contentFixed ${category !== 0 && 'transBlack2'}`}>
+        <div className={`zIndex2 ${category === 0 ? 'content' : 'contentFixed'}  ${category !== 0 && 'transBlack2'}`}>
           {
             category === 0 ? <LogoMain/> : <TabCategory/>
           }
