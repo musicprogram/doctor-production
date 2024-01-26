@@ -36,21 +36,17 @@ export const TabCategory = () =>{
 
   return(
     <Fragment>
-      <div className="d-flex justify-content-center">
-        <img
-          src={'/doctor-production/images/logoDoctor.png'}
-          alt=""
-          className="imgBrand animate__animated animate__jackInTheBox" />
-      </div>
 
-      <Nav justify fill variant="tabs" className="animate__animated animate__fadeIn mb-3">
+
+
+      <Nav className="justify-content-center animate__animated animate__fadeIn">
         {
           sectionCategories.map((section, i)=>{
             return(
               <Fragment>
                 <Nav.Item key={i} onClick={()=> handleSectionClick(section)}>
                   <Nav.Link>
-                  <span className={`textCaprasimo btnTabCat  textShadow1 confTextGrad ${category === section.id ? 'colorTextGrad1' : 'colorTextGrad5'}`}>
+                  <span className={`textCaprasimo btnTabCat    ${category === section.id ? 'colorTextGrad6' : 'colorTextGrad5'}`}>
                     {section.category}
                   </span>
                   </Nav.Link>
@@ -59,6 +55,7 @@ export const TabCategory = () =>{
             )
           })
         }
+
       </Nav>
     </Fragment>
   )

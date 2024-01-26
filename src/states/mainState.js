@@ -11,7 +11,7 @@ export const categoryMain = atom({
 
 export const videoMain = atom({
   key: 'videoMain', // unique ID (with respect to other atoms/selectors)
-  default: randomNum(2,8)
+  default: randomNum(7,8)
 
 });
 

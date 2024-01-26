@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 @import 'animate.css';
+@import 'breakpoints';
 
 
 /*
@@ -172,12 +173,23 @@ body{
   padding: 20px;
 }
 
+
+.contentFixed{
+  position: fixed;
+}
+
+
 .transBlack {
   background: rgba(0, 0, 0, 0.9);
 }
 
+.transBlack2 {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(7px);
+}
+
 .transBlack1 {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* Add some content at the bottom of the video/page */
@@ -190,11 +202,19 @@ body{
   height: 100%;
   padding: 10px;
   overflow-y: auto !important;
+  overflow-x: hidden;
 }
 
 
 .colorTextGrad1{
-  background: -webkit-linear-gradient(#BC329E, #bb6098);
+  background: linear-gradient(to right, #D122BB 0%, #820073 100%);
+}
+
+.colorTextGrad6{
+  background: #D122BB;
+  background: linear-gradient(to right, #D122BB 0%, #820073 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .colorTextGrad2{
@@ -210,12 +230,11 @@ body{
 
 
 .colorTextGrad5{
-  background: -webkit-linear-gradient(#000000, #e2f6ff, #21c3ff);
+  background: -webkit-linear-gradient(#000000, #e2f6ff, #cecece);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.colorTextGrad6{
-  background: -webkit-linear-gradient(#00FFFFFF 90%, #effffb 10%);
-}
 
 
 .gradTextColor{
@@ -265,7 +284,7 @@ body{
 }
 
 .categoryMain{
-  padding-bottom: 83%;
+  padding-bottom: 5%;
 }
 
 .textObj{
